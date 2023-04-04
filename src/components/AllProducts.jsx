@@ -11,10 +11,10 @@ const AllProducts = () => {
             .then(data => setProducts(data))
     }, [])
     return (
-        <div className='bg-white h-screen grid grid-rows-4 grid-flow-col gap-4' >
+        <div className='bg-white grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 2xl:grid-cols-5 p-5' >
             {
                 products.map((item) => (
-                    <SingleProduct products={products} key={item.id} />
+                    <SingleProduct product={item} key={item.id} />
                 ))
             }
         </div>
