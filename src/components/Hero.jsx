@@ -1,6 +1,7 @@
 import React from 'react'
 import Typed from 'react-typed';
 
+
 const Hero = () => {
     return (
         <div className='text-white flex flex-col justify-center mx-auto text-center h-screen mt-[-120px] gap-5 p-2 bg-bl bg-black'>
