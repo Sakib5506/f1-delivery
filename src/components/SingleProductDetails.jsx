@@ -27,9 +27,8 @@ const SingleProductDetails = () => {
         setCart(newCart)
     }
 
-    // console.log(cart);
     return (
-        <div className='min-h-[70vh] grid sm:grid-cols-2'>
+        <div className='min-h-[80vh] grid sm:grid-cols-2'>
             <div className='flex flex-col items-center justify-center p-5'>
                 <img className='max-w-[50%]' src={selectedproduct.image} alt="" />
             </div>

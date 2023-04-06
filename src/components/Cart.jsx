@@ -23,7 +23,7 @@ const Cart = () => {
 
 
     return (
-        <div className='min-h-[70vh] flex flex-col items-center gap-3 py-3'>
+        <div className='min-h-[80vh] flex flex-col items-center gap-3 py-3'>
             <div>
                 {
                     cart.map(item => (
@@ -41,7 +41,9 @@ const Cart = () => {
                 <p className='font-semibold'>Vat/Tax: ${vat}</p>
                 <p className='font-semibold'>Shipping Cost: ${shippingCost}</p>
                 <p className='font-semibold'>Total Price: ${totalPrice.toFixed(2)}</p>
-                <button className='bg-[#0C0032] text-white rounded-md px-3 py-1 my-2 w-[200px]'>Checkout your item</button>
+                <Link to={'/orderplaced'}>
+                    <button className='bg-[#0C0032] text-white rounded-md px-3 py-1 my-2 w-[200px]'>Checkout your item</button>
+                </Link>
             </div>
         </div>
     )

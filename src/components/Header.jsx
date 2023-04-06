@@ -43,16 +43,27 @@ const Header = () => {
                 </Link>
 
                 <div className='hidden md:block'>
-                    <button className='bg-[#3500D3] rounded-md px-5 py-1 text-center mr-2'>Login</button>
-                    <button className=' bg-[#3500D3] rounded-md px-5 py-1 text-center'>Sign up</button>
+                    <Link to={'/login'}>
+                        <button className='bg-[#3500D3] rounded-md px-5 py-1 text-center mr-2'>Login</button>
+                    </Link>
+                    <Link to={'/login'}>
+                        <button className='bg-[#3500D3] rounded-md px-5 py-1 text-center mr-2'>Sign up</button>
+                    </Link>
+
                 </div>
                 <ImMenu onClick={handleMenuIcon} className=' block md:hidden' size={20}></ImMenu>
 
                 {/* Mobile view */}
                 <div className={menu ? 'flex sm:hidden justify-between bg-[#282828] gap-3 fixed top-0 right-0 h-full w-[50%] p-5' : 'hidden'}>
                     <div className='flex flex-col w-[150px] gap-2'>
-                        <button className=' bg-[#3500D3] rounded-md  px-5 py-1 '>Login</button>
-                        <button className=' bg-[#3500D3] rounded-md px-5 py-1 '>Sign up</button>
+                        <Link to={'/login'}>
+                            <button className=' bg-[#3500D3] rounded-md  px-5 py-1 '>Login</button>
+                        </Link>
+                        <Link to={'/login'}>
+                            <button className=' bg-[#3500D3] rounded-md px-5 py-1 '>Sign up</button>
+                        </Link>
+
+
                     </div>
                     <AiOutlineClose onClick={handleMenuIcon} size={20} ></AiOutlineClose>
                 </div>

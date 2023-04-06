@@ -3,6 +3,15 @@ import Typed from 'react-typed';
 
 
 const Hero = () => {
+    //Scroll
+    const handleClickScroll = () => {
+        const element = document.getElementById('section-1');
+        if (element) {
+            // 👇 Will scroll smoothly to the top of the next section
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
     return (
         <div className='text-white flex flex-col justify-center mx-auto text-center h-screen mt-[-120px] gap-5 p-2 bg-bl bg-black'>
             <h1 className='font-bold text-2xl md:text-5xl' >Fatest Delivery in your town</h1>
@@ -14,7 +23,7 @@ const Hero = () => {
                 loop
             /> </span></p>
 
-            <button className='bg-[#3500D3] rounded-md  px-5 py-1 w-[200px] mx-auto'>Get Started</button>
+            <button onClick={handleClickScroll} className='bg-[#3500D3] rounded-md  px-5 py-1 w-[200px] mx-auto'>Get Started</button>
         </div>
     )
 }
